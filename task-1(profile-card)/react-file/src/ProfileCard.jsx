@@ -1,3 +1,5 @@
+
+// function ProfileCard(){
 //     return(
 //         <div className="Card">
 //             <img src={Profilepic} alt="Kareena Yadav" />
@@ -18,5 +20,36 @@ function ProfileCard(items){
     );
  }
  
+ function ProfileCard1({ name, bio, image, skills, hobbies }) {
+  return (
+    <div className="Card">
+      <img src={image} alt={name} />
+      <h1>{name}</h1>
+      <p>{bio}</p>
+
+      <h4>Skills:</h4>
+      <ul>
+        {skills.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
+      </ul>
+
+      <h4>Hobbies:</h4>
+      <ul>
+        {hobbies.map((hobby, index) => (
+          <li key={index}>{hobby}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export{ProfileCard, ProfileCard1} ;
+
+ProfileCard1.defaultProps = {
+    skills: ["No skills added"],
+    hobbies: ["No hobbies added"],
+  };
+
  
- export default ProfileCard
+//  export default ProfileCard;
