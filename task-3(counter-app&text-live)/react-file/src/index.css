@@ -1,0 +1,42 @@
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+.task{
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  height: 20rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.count-heading{
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+  
+.btn1{
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
