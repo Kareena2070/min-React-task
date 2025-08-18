@@ -29,6 +29,12 @@
   font-size: 4rem;
 }
 
+.message{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+ }
+ 
+
 .btn{
   display: flex;
   justify-content: center;
