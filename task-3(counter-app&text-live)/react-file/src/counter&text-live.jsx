@@ -13,6 +13,8 @@ function Counter(){
     message = `You clicked ${count} times`;
     }
 
+    const [text, setText] = useState("")
+
     return(
         <>
         <div className="task">
@@ -23,6 +25,14 @@ function Counter(){
             <button className="btn1" onClick={() => setCount(count - 1)}>Decrement</button>
             <button className="btn1" onClick={()=> setCount(0)}>Reset</button>
             </div>
+        </div>
+
+        <div  className="task">
+          
+          <input  className="input" value={text} onChange={(event)=> setText(event.target.value)}/>
+          <p className="text">shows typed text live: </p>
+          <div className="inputText">{text}</div>
+
         </div>
 
         </>
