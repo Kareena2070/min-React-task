@@ -1,0 +1,20 @@
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 6em;
+  line-height: 1.1;
+}
+
+p{
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+}
+
