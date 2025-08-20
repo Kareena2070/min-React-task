@@ -17,9 +17,15 @@ function TodoApp(){
 
         setTask([...task, addTask])
         setInputValue ("")
-    
     }
 
+    function deleteBtn(id){
+        setTask(task.filter(t=>t.id !==id));
+    }
+
+    function doneBtn (id){
+        setTask(task.map(t => t.id===id? {...t, done: !t.done}:t));
+    }
 
 
     return(
@@ -38,16 +44,18 @@ function TodoApp(){
                 {task.map(t =>{
                     return <li className="task" key={t.id} style={{textDecoration : t.done? "line-through" : "none"}} >
                         {t.text}
+                        <div className="bth">
+                   <button  onClick={()=> doneBtn(t.id)}>✅</button>
+                   <button  onClick={()=> deleteBtn(t.id)}>❌</button>
+                   </div>
+
                    
                 </li>
                 })}     
             </ol>
         </div>
-    
-        
+      
         </>
-
-
     );
 }
 
