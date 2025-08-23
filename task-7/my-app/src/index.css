@@ -1,0 +1,27 @@
+
+
+
+body {
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items:  center;
+
+}
+.text{
+  border: 2px solid black;
+  padding: 1rem 3rem;
+}
+
+.input p{
+    font-size: 2rem;
+}
+.input input{
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+}
+
+.input textarea{
+  padding: 0.5rem 2rem;
+}

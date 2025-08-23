@@ -32,7 +32,7 @@ function TodoApp(){
         <>
         
         <div className="todoList  ">
-            <h1 className="haeding">Todo List </h1>
+            <h1 className="haeding">To-do List </h1>
             <div className="inputBtn">
                 <input type="text" 
                 placeholder="type here.."
