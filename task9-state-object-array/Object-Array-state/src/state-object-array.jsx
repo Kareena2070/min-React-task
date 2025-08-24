@@ -87,4 +87,82 @@ function StateArray(){
 
 
 
- export {StateObject, StateArray}
+ 
+ function ListOfCar(){
+
+
+    const [cars, setCars] = useState([])
+    const [carYear, setCarYear] = useState(new Date().getFullYear())
+    const [carMake, setCarMake] = useState("")
+    const [carModel, setCarModel] = useState("")
+ 
+ 
+    function handleAdd(){
+ 
+ 
+        const newCar = {
+            year: carYear,
+            make: carMake,
+            model: carModel
+        }
+       
+        setCars([...cars, newCar])
+       
+        setCarYear(new Date().getFullYear())
+        // setCarYear("")
+        setCarMake("")
+        setCarModel("")
+ 
+ 
+ 
+ 
+    }
+ 
+ 
+    function handleRemove(id){
+        setCars(cars.filter((_, i)=>i!==id))
+    }
+ 
+ 
+    function handleCarYear(e){
+        setCarYear(e.target.value)
+ 
+ 
+    }
+    function handleCarMake(e){
+        setCarMake(e.target.value)
+ 
+ 
+    }
+    function handleCarModel(e){
+        setCarModel(e.target.value)
+ 
+ 
+    }
+ 
+ 
+    return(
+        <div className="box">
+            <h1>List of car object</h1>
+            <ul>
+                {cars.map((car, id)=>(
+                    <li key={id} onClick={() => handleRemove(id)}>{car.year} {car.make} {car.model}</li>
+                ))}
+            </ul>
+           
+                <input className="inputBox" type="number" value={carYear} onChange={handleCarYear}/> <br />
+                <input className="inputBox" type="text" value={carMake} onChange={handleCarMake} /> <br />
+                <input className="inputBox" type="text" value={carModel} onChange={handleCarModel} /> <br />
+ 
+ 
+                <button onClick={handleAdd}>Add Car</button>
+        </div>
+    );
+ }
+ 
+
+ 
+ 
+ export {StateObject, StateArray, ListOfCar}
+ 
+ 
