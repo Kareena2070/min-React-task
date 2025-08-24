@@ -1,5 +1,5 @@
 // import './App.css'
-import StateObject from './state-object-array'
+import {StateObject, StateArray} from './state-object-array'
 
 function App() {
 
@@ -7,6 +7,8 @@ function App() {
   return (
     <>
      <StateObject/>
+     <StateArray/>
+
      
     </>
   )

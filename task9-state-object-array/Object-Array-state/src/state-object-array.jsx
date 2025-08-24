@@ -37,5 +37,54 @@ function StateObject(){
 
 
 
-export default StateObject
 
+
+function StateArray(){
+
+
+    const [foods, setFoods] = useState(["apple", "mango", "banana"])
+ 
+ 
+    function handleAddFood(){
+ 
+ 
+        const newfood = document.getElementById("foodInput").value
+        document.getElementById("foodInput").value = ""
+ 
+ 
+        setFoods([...foods, newfood])
+    }
+ 
+ 
+    function handleRemoveFood(id){
+        // setFoods(foods.filter(()=> id!=id))      // this will remove all li becuase
+ 
+ 
+        setFoods(foods.filter((_, i)=> i!=id))
+    }
+ 
+ 
+ 
+ 
+    return(
+        <div className="box">
+            <h1>List of Food</h1>
+            <ul>
+                {foods.map((food, id)=>(
+                    <li key={id} onClick={()=>handleRemoveFood(id)}>
+                        {food}
+                        </li>
+                ))}
+            </ul>
+ 
+ 
+            <input className="inputBox" type="text"  id="foodInput" value={foods.food}  /> <br />
+            <button onClick={handleAddFood}>Add Food</button>
+        </div>
+    );
+ }
+ 
+
+
+
+ export {StateObject, StateArray}
